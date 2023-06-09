@@ -9,7 +9,7 @@
         "url": "https://github.com/node-red/node-red-nodes.git"
     },
     "scripts": {
-        "test": "grunt"
+        "test": "wrap () { grunt simplemocha:all --only=\"$@\"; }; wrap"
     },
     "contributors": [
         {

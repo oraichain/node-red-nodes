@@ -12,8 +12,8 @@ module.exports = function(grunt) {
                 ignoreLeaks: false,
                 ui: 'bdd',
                 reporter: 'spec'
-            },
-            all: { src: ['test/*/*/*_spec.js'] }
+            },            
+            all: { src: [grunt.option('only') ?? 'test/*/*/*_spec.js'] }
         },
         jshint: {
             options: {

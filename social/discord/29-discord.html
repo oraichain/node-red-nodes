@@ -1,0 +1,38 @@
+<script type="text/html" data-template-name="discord-credentials">
+  <div class="form-row">
+    <label style="margin-left: 20px;" for="node-config-input-webhook"><span data-i18n="discord.label.webhook"></span></label>
+    <input type="text" id="node-config-input-webhook" />
+  </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('discord', {
+    category: 'function',
+    color: '#a6bbcf',
+    defaults: {
+      name: { value: '' }
+    },
+    credentials: {
+      webhook: { type: 'text' }
+    },
+    icon: 'discord.png',
+    label: function () {
+      return this.name || 'discord';
+    }
+  });
+</script>
+
+<script type="text/html" data-template-name="discord">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-screen_name"><i class="fa fa-link"></i> Web Hook</label>
+    <input type="text" id="node-config-input-screen_name" placeholder="Web Hook" />
+  </div>
+</script>
+
+<script type="text/html" data-help-name="discord">
+  <p>A node that check low balance and send noti to discord channel</p>
+</script>
