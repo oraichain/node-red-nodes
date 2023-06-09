@@ -24,7 +24,7 @@ describe('discord Node', function () {
       var n2 = helper.getNode('n2');
       var n1 = helper.getNode('n1');
       n2.on('input', function (msg) {
-        msg.should.have.property('payload', 'uppercase');
+        msg.should.have.property('payload', 'UpperCase');
         done();
       });
       n1.receive({ payload: 'UpperCase' });

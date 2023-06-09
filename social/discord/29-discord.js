@@ -3,7 +3,7 @@ module.exports = function (RED) {
     RED.nodes.createNode(this, config);
     var node = this;
     node.on('input', function (msg) {
-      alert(JSON.stringify(config));
+      console.log(JSON.stringify(config));
       node.send(msg);
     });
   }
