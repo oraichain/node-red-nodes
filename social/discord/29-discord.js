@@ -1,7 +1,7 @@
 const { Webhook } = require('discord-webhook-node');
 
 module.exports = function (RED) {
-  RED.nodes.registerType('discord', (config) => {
+  RED.nodes.registerType('discord', function (config) {
     RED.nodes.createNode(this, config);
     const hook = new Webhook(config.webhook);
     this.on('input', (msg) => {
