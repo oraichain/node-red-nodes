@@ -9,3 +9,4 @@ package-lock.json
 social/xmpp/92-xmpp.old
 *.tgz
 .DS_Store
+.npmrc

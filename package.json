@@ -9,7 +9,8 @@
     "url": "https://github.com/node-red/node-red-nodes.git"
   },
   "scripts": {
-    "test": "wrap () { grunt simplemocha:all --only=\"$@\"; }; wrap"
+    "test": "wrap () { grunt simplemocha:all --only=\"$@\"; }; wrap",
+    "deploy": "yarn publish --access public --patch"
   },
   "contributors": [
     {
